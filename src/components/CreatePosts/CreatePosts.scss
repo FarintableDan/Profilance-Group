@@ -1,0 +1,25 @@
+.posts-create {
+  width: 100%;
+
+  &__title {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-input {
+      margin-bottom: 12px;
+      width: 100%;
+    }
+
+    &-textarea {
+      flex-basis: 100%;
+      margin-bottom: 12px;
+      resize: none;
+      outline: none;
+    }
+  }
+}

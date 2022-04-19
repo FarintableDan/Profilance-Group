@@ -1,0 +1,28 @@
+.login {
+  &-title {
+    margin-bottom: 16px;
+  }
+
+  &-form {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__errors {
+      margin-bottom: 12px;
+
+      &-error {
+        color: red;
+      }
+    }
+
+    &__input {
+      margin-bottom: 12px;
+      flex-basis: 100%;
+    }
+
+    &__button {
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+  }
+}

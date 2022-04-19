@@ -1,0 +1,20 @@
+.header {
+  padding: 16px 0;
+  background-color: #fffaf2;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  &-nav {
+    display: flex;
+
+    &__link {
+      margin: 0 6px;
+    }
+  }
+}
