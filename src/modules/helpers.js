@@ -6,7 +6,6 @@ export const loginValidate = (value, cb) => {
     isValid = false;
   }
   if (errors.length) cb(errors);
-  console.log(isValid)
   return isValid
 }
 
@@ -18,6 +17,5 @@ export const passwordValidate = (value, cb) => {
     isValid = false;
   }
   if (errors.length) cb(errors);
-  console.log(isValid)
   return isValid
 }

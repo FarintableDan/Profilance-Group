@@ -46,7 +46,6 @@ export const Login = () => {
     "password": {
       placeholder: 'Пароль',
       validateRules: (value) => {
-        console.log(value)
         return passwordValidate(value, (data) => {
           setErrors(data)
         })
@@ -54,8 +53,6 @@ export const Login = () => {
       type: 'password'
     }
   };
-
-  console.log(errors)
 
   return (
     <div className="login">

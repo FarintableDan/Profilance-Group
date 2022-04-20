@@ -44,7 +44,6 @@ export const newsReducer = createSlice({
     removeNew: (state, action) => {
       const index = state.data.findIndex(i => i.id === action.payload);
       if (index !== -1) {
-        console.log(index)
         state.data = state.data.filter((i, k) => k !== index);
       }
     }
