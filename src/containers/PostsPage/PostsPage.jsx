@@ -58,14 +58,14 @@ export const PostsPage = () => {
       {sortDataBySearch().map(item => {
         if (!item.approved && !isAdmin) return null;
         return (
-          <div key={item.id} className="posts-item">
+          <div key={item.id} className="posts__item">
             {item.date && (
               <div className="posts__date">
                 {item.date}
               </div>
             )}
             {item.title && (
-              <div className="posts-title">
+              <div className="posts__title">
                 {item.title}
               </div>
             )}
