@@ -47,12 +47,15 @@ export const CreatePosts = (props) => {
   return (
     <div className="posts-create">
       <h3 className="posts-create__title">Создать пост</h3>
-      <form onSubmit={(e) => submitHandler(e)} className="posts-create__form">
+      <form
+        className="posts-create__form"
+        onSubmit={(e) => submitHandler(e)}
+      >
         {fields.map(field => {
           if (field.type === "input") {
             return (
               <input
-                className="input posts-create__form-input"
+                className="input posts-create__input"
                 type="text"
                 placeholder={field.placeholder}
                 value={field.value}
@@ -65,7 +68,7 @@ export const CreatePosts = (props) => {
           if (field.type === "textarea") {
             return (
               <textarea
-                className="textarea posts-create__form-textarea"
+                className="textarea posts-create__textarea"
                 name={field.name}
                 rows="8"
                 placeholder={field.placeholder}

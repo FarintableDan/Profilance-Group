@@ -8,7 +8,7 @@ export const HomePage = () => {
   const userInfo = useSelector(selectUserInfo);
   return (
     <section className="section home">
-      <h1>Привет, {userInfo?.name || 'Гость'}</h1>
+      <h1 className="home__title">Привет, {userInfo?.name || 'Гость'}</h1>
     </section>
   )
 }

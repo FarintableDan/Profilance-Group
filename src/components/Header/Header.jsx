@@ -27,13 +27,13 @@ export const Header = () => {
   ];
   return (
     <div className="header">
-      <div className="header-container">
+      <div className="header__container">
         <Link to="/" className="header-logo">
           <img src={logo} className="header-logo__image" alt="logo" />
         </Link>
-        <div className="header-nav">
+        <div className="header__nav">
           {nav.map(item => (
-            <Link className="header-nav__link" key={item.name} to={item.link}>
+            <Link className="link header__link" key={item.name} to={item.link}>
               {item.name}
             </Link>
           ))}

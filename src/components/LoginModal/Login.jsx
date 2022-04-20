@@ -59,10 +59,10 @@ export const Login = () => {
 
   return (
     <div className="login">
-      <h3 className="login-title">
+      <h3 className="login__title">
         Авторизация
       </h3>
-      <form className="login-form" onSubmit={(e) => logIn(e)}>
+      <form className="login__form" onSubmit={(e) => logIn(e)}>
         {Object.keys(fields).map(field => (
           <input
             value={form[field]}
@@ -70,25 +70,25 @@ export const Login = () => {
             onChange={(e) => inputHandler(field, e.target.value)}
             type={fields[field].type}
             placeholder={fields[field].placeholder}
-            className="login-form__input input"
+            className="login__input input"
             key={field}
           />
         ))}
         {(errors.length > 0 || submitError) && (
-          <div className="login-form__errors">
+          <div className="login__errors">
             {errors.map((error, k) => (
               <div className="login-form__errors-error" key={k}>
                 *{error}
               </div>
             ))}
             {submitError && (
-              <div className="login-form__errors-error">
+              <div className="login__errors__error">
                 *Проверьте введенные данные и повторите попытку
               </div>
             )}
           </div>
         )}
-        <button className="button button_orange login-form__button" type="submit" value="submit">Войти</button>
+        <button className="button button_orange login__button" type="submit" value="submit">Войти</button>
       </form>
     </div>
   )

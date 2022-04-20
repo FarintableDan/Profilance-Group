@@ -53,29 +53,29 @@ export const PostsPage = () => {
         placeholder="Введите название поста для сортировки"
       />
       {isUser && (
-        <button className="posts-create__button button" onClick={() => setPostsModal(true)}>Создать пост</button>
+        <button className="button posts__button" onClick={() => setPostsModal(true)}>Создать пост</button>
       )}
       {sortDataBySearch().map(item => {
         if (!item.approved && !isAdmin) return null;
         return (
           <div key={item.id} className="posts-item">
             {item.date && (
-              <div className="posts-item__date">
+              <div className="posts__date">
                 {item.date}
               </div>
             )}
             {item.title && (
-              <div className="posts-item__title">
+              <div className="posts-title">
                 {item.title}
               </div>
             )}
             {item.description && (
-              <div className="posts-item__description">
+              <div className="posts__description">
                 {item.description}
               </div>
             )}
             {isAdmin && !item.approved && (
-              <div className="posts-item__footer">
+              <div className="posts__footer">
                 {adminButtons.map(button => (
                   <button className={`button button_${button.color}`} key={button.name} onClick={() => button.action(item.id)}>{button.text}</button>
                 ))}
